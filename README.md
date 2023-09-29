@@ -1,59 +1,47 @@
-![image](https://github.com/Sadashiva84/TravelMemory/assets/137101252/703568a2-f0e9-484b-8f82-ef8ef9e4abd1)# Travel Memory
-## This Project uses a cloud instance to be deployed
+# Deployment Documentation
 
-1. Backend Configuration:
+This document provides step-by-step instructions for deploying a web application with two frontend instances and one backend instance. The deployment includes setting up GitHub, configuring MongoDB, Nginx as a reverse proxy, and using Cloudflare for domain management.
 
-   - Clone the repository and navigate to the backend directory.
+## Step 1: Create Instances
 
-   - The backend runs on port 3000. Set up a reverse proxy using nginx to ensure smooth deployment on EC2.
+Create three instances: two for frontend and one for backend.
 
-   - Update the .env file to incorporate database connection details and port information.
+## Step 2: Clone Repository
 
- 2. Frontend and Backend Connection:
+Connect to GitHub and clone the repository on all three instances.
 
-   - Navigate to the `urls.js` in the frontend directory.
+## Step 3: Configure Backend
 
-   - Update the file to ensure the frontend communicates effectively with the backend.
+In the backend instance, open the `.env` file and configure the MongoDB database with the credentials for the previously created free cluster. Also, configure the ports for the backend.
 
- 3. Scaling the Application:
+## Step 4: Configure Nginx as Reverse Proxy
 
-   - Create multiple instances of both the frontend and backend servers.
+Configure Nginx as a reverse proxy by following [this documentation](https://techieadarsh.hashnode.dev/how-to-set-up-a-reverse-proxy-for-nginx-step-by-step). Ensure you unlink the default configuration files and link the new configuration files.
 
-   - Add these instances to a load balancer to ensure efficient distribution of incoming traffic.
+## Step 5: Configure Frontend
 
- 4. Domain Setup with Cloudflare:
+On the frontend instances, edit the `url.js` file and specify the backend IP address.
 
-   - Connect your custom domain to the application using Cloudflare.
+## Step 6: Domain Purchase
 
-   - Create a CNAME record pointing to the load balancer endpoint.
+A domain name, `dynalink.in`, was purchased from Hostinger.
 
-   - Set up an A record with the IP address of the EC2 instance hosting the frontend.
+## Step 7: Configure Cloudflare
 
+Configure Cloudflare to function as an entrance for the domain. Set up the necessary DNS settings, including A records for frontend and backend, and CNAME for load balancer.
 
+## Step 8: Create Target Group and Load Balancer
 
+Create a Target Group for frontend instances and specify the necessary security group settings. Create a load balancer using the target group.
 
+## Step 9: Start Frontends
 
-`.env` file to work with the backend:
+Start the frontend instances using the command: `sudo node index.js`.
 
-```
-MONGO_URI='ENTER_YOUR_URL'
-PORT=3000
-```
+## Step 10: Start Backend
 
-Data format to be added: 
+Start the backend instance using the command: `sudo npm start`.
 
-```json
-{
-    "tripName": "Incredible India",
-    "startDateOfJourney": "19-03-2022",
-    "endDateOfJourney": "27-03-2022",
-    "nameOfHotels":"Hotel Namaste, Backpackers Club",
-    "placesVisited":"Delhi, Kolkata, Chennai, Mumbai",
-    "totalCost": 800000,
-    "tripType": "leisure",
-    "experience": "Lorem Ipsum, Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum,Lorem Ipsum, ",
-    "image": "https://t3.ftcdn.net/jpg/03/04/85/26/360_F_304852693_nSOn9KvUgafgvZ6wM0CNaULYUa7xXBkA.jpg",
-    "shortDescription":"India is a wonderful country with rich culture and good people.",
-    "featured": true
-}
-```
+## Step 11: Verify Application
+
+After the application is successfully started, access it by navigating to the DNS (e.g., `dynalink.in`) in a web browser. Add experiences, complete all fields, and save. The entries should appear on the screen and reflect in the database (verify on Atlas).
