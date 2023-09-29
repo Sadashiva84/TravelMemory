@@ -1,4 +1,6 @@
 # Travel Memory
+## This Project uses a cloud instance to be deployed
+
 
 `.env` file to work with the backend:
 
