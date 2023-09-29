@@ -1,5 +1,36 @@
-# Travel Memory
+![image](https://github.com/Sadashiva84/TravelMemory/assets/137101252/703568a2-f0e9-484b-8f82-ef8ef9e4abd1)# Travel Memory
 ## This Project uses a cloud instance to be deployed
+
+1. Backend Configuration:
+
+   - Clone the repository and navigate to the backend directory.
+
+   - The backend runs on port 3000. Set up a reverse proxy using nginx to ensure smooth deployment on EC2.
+
+   - Update the .env file to incorporate database connection details and port information.
+
+ 2. Frontend and Backend Connection:
+
+   - Navigate to the `urls.js` in the frontend directory.
+
+   - Update the file to ensure the frontend communicates effectively with the backend.
+
+ 3. Scaling the Application:
+
+   - Create multiple instances of both the frontend and backend servers.
+
+   - Add these instances to a load balancer to ensure efficient distribution of incoming traffic.
+
+ 4. Domain Setup with Cloudflare:
+
+   - Connect your custom domain to the application using Cloudflare.
+
+   - Create a CNAME record pointing to the load balancer endpoint.
+
+   - Set up an A record with the IP address of the EC2 instance hosting the frontend.
+
+
+
 
 
 `.env` file to work with the backend:
