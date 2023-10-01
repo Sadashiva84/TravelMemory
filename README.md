@@ -14,13 +14,11 @@ Create three instances: two for frontend and one for backend.
 
 Connect to GitHub and clone the repository on all three instances.
 
-![Instances]()
-
 ## Step 3: Configure Backend
 
 In the backend instance, open the `.env` file and configure the MongoDB database with the credentials for the previously created free cluster. Also, configure the ports for the backend.
 
-![Instances]()
+![backend_env](ram_backend_env_file.png)
 
 ## Step 4: Configure Nginx as Reverse Proxy
 
@@ -30,13 +28,9 @@ Configure Nginx as a reverse proxy by following [this documentation](https://tec
 
 On the frontend instances, edit the `url.js` file and specify the backend IP address.
 
-![Instances]()
-
 ## Step 6: Domain Purchase
 
 A domain name, `dynalink.in`, was purchased from Hostinger.
-
-![Instances]()
 
 ## Step 7: Configure Cloudflare
 
@@ -67,8 +61,7 @@ Start the backend instance using the command: `sudo npm start`.
 
 ![node](node.png)
 
-
-![backend](ram backend op.png)
+![backend](ram_backend_op.png)
 
 ## Step 11: Verify Application
 
@@ -77,4 +70,9 @@ After the application is successfully started, access it by navigating to the DN
 ![landingpage](landingpage.png)
 
 ![dynalink](dynalink.png)
+
+![dynalink](dynalink_add_experience.png)
+
+![backend](mongo_DB_entry.png)
+
 
