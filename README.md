@@ -5,6 +5,7 @@ This document provides step-by-step instructions for deploying a web application
 ## Step 1: Create Instances
 
 Create three instances: two for frontend and one for backend.
+
 ![Instances](1_instances.png)
 
 ## Step 2: Clone Repository
