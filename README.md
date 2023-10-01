@@ -71,8 +71,8 @@ After the application is successfully started, access it by navigating to the DN
 
 ![dynalink](dynalink.png)
 
-![dynalink](dynalink_add_experience.png)
+![addexp](dynalink_add_experience.png)
 
-![backend](mongo_DB_entry.png)
+![backenddb](mongo_DB_entry.png)
 
 
