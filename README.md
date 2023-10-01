@@ -11,6 +11,7 @@ Create three instances: two for frontend and one for backend.
 ## Step 2: Clone Repository
 
 Connect to GitHub and clone the repository on all three instances.
+
 ![Instances]()
 ## Step 3: Configure Backend
 
