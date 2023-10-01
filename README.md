@@ -18,7 +18,7 @@ Connect to GitHub and clone the repository on all three instances.
 
 In the backend instance, open the `.env` file and configure the MongoDB database with the credentials for the previously created free cluster. Also, configure the ports for the backend.
 
-![backend_env](ram_backend_env_file.png)
+![backend_env](ram_backend_env_file.PNG)
 
 ## Step 4: Configure Nginx as Reverse Proxy
 
@@ -46,9 +46,6 @@ Create a Target Group for frontend instances and specify the necessary security 
 
 ![elb](elb.png)
 
-
-![Instances]()
-
 ## Step 9: Start Frontends
 
 Start the frontend instances using the command: `sudo node index.js`.
@@ -61,7 +58,7 @@ Start the backend instance using the command: `sudo npm start`.
 
 ![node](node.png)
 
-![backend](ram_backend_op.png)
+![backend](ram_backend_op.PNG)
 
 ## Step 11: Verify Application
 
@@ -71,8 +68,8 @@ After the application is successfully started, access it by navigating to the DN
 
 ![dynalink](dynalink.png)
 
-![addexp](dynalink_add_experience.png)
+![addexp](dynalink_add_experience.PNG)
 
-![backenddb](mongo_DB_entry.png)
+![backenddb](mongo_DB_entry.PNG)
 
 
