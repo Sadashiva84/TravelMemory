@@ -67,6 +67,9 @@ Start the backend instance using the command: `sudo npm start`.
 
 ![node](node.png)
 
+
+![backend](ram backend op.png)
+
 ## Step 11: Verify Application
 
 After the application is successfully started, access it by navigating to the DNS (e.g., `dynalink.in`) in a web browser. Add experiences, complete all fields, and save. The entries should appear on the screen and reflect in the database (verify on Atlas).
